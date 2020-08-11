@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="84dc2adb-6d93-49d8-b964-1c124e5a472e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fvdAd1WyAeOWiKnIOBPIvkQ2kh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\Desktop\local-dev-tests\drocksrecords" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="update-dependencies" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="update-dependencies" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.update-dependencies" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84dc2adb-6d93-49d8-b964-1c124e5a472e" name="Default Changelist" comment="" />
+      <created>1597102358026</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597102358026</updated>
+      <workItem from="1597102359073" duration="1521000" />
+      <workItem from="1597103906807" duration="303000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="198" key="#Inspections" timestamp="1597103195417">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103195417" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597102843009">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597102843009" />
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1597103111092">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103111092" />
+    <state x="830" y="422" key="Github.ShareDialog" timestamp="1597103617997">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="830" y="422" key="Github.ShareDialog/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103617997" />
+    <state width="1899" height="278" key="GridCell.Tab.0.bottom" timestamp="1597103897181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103897181" />
+    <state width="1899" height="278" key="GridCell.Tab.0.center" timestamp="1597103897181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="278" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103897181" />
+    <state width="1899" height="278" key="GridCell.Tab.0.left" timestamp="1597103897180">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="278" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103897180" />
+    <state width="1899" height="278" key="GridCell.Tab.0.right" timestamp="1597103897181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="278" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103897181" />
+    <state x="681" y="261" width="585" height="540" key="StructurePopup" timestamp="1597102777980">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="681" y="261" width="585" height="540" key="StructurePopup/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597102777980" />
+    <state x="761" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597103639195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="761" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103639195" />
+  </component>
+</project>

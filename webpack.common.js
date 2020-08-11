@@ -1,9 +1,6 @@
 module.exports = {
     entry: {
         index: "./src/index.js",
-        aide: "./src/csv/aide.js",
-        csv: "./src/csv/csv.js",
-        nouvelles: "./src/nouvelles/nouvelles.js",
     },
     module: {
         rules: [

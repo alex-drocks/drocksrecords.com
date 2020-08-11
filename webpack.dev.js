@@ -28,26 +28,5 @@ module.exports = merge(common, {
             cache: true,
             minify: false
         }),
-        new HtmlWebpackPlugin({
-            filename: "aide.html",
-            template: "./src/csv/aide.html",
-            chunks: ["aide"],
-            cache: true,
-            minify: false
-        }),
-        new HtmlWebpackPlugin({
-            filename: "csv.html",
-            template: "./src/csv/csv.html",
-            chunks: ["csv"],
-            cache: true,
-            minify: false
-        }),
-        new HtmlWebpackPlugin({
-            filename: "nouvelles.html",
-            template: "./src/nouvelles/nouvelles.html",
-            chunks: ["nouvelles"],
-            cache: true,
-            minify: false
-        }),
     ]
 });

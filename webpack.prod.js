@@ -65,57 +65,6 @@ module.exports = merge(common, {
                     useShortDoctype: true
                 }
             }),
-            new HtmlWebpackPlugin({
-                filename: "aide.html",
-                template: "./src/csv/aide.html",
-                chunks: ["aide"],
-                cache: true,
-                inject: "head",
-                scriptLoading: "defer",
-                minify: {
-                    collapseWhitespace: true,
-                    removeAttributeQuotes: true,
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    removeScriptTypeAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    useShortDoctype: true
-                }
-            }),
-            new HtmlWebpackPlugin({
-                filename: "csv.html",
-                template: "./src/csv/csv.html",
-                chunks: ["csv"],
-                cache: true,
-                inject: "head",
-                scriptLoading: "defer",
-                minify: {
-                    collapseWhitespace: true,
-                    removeAttributeQuotes: true,
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    removeScriptTypeAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    useShortDoctype: true
-                }
-            }),
-            new HtmlWebpackPlugin({
-                filename: "nouvelles.html",
-                template: "./src/nouvelles/nouvelles.html",
-                chunks: ["nouvelles"],
-                cache: true,
-                inject: "head",
-                scriptLoading: "defer",
-                minify: {
-                    collapseWhitespace: true,
-                    removeAttributeQuotes: true,
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    removeScriptTypeAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    useShortDoctype: true
-                }
-            }),
             new ScriptExtHtmlWebpackPlugin({
                 defaultAttribute: "defer"
             })
