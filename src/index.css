@@ -3,8 +3,11 @@
 :root {
     --main-bc: black;
     --main-text-color: white;
+    --light-gray: rgba(255, 255, 255, 0.84);
+    --card-title-bg: #1055ff;
     --scrollbar-width: 4px;
-    --content-h1-background: rgba(255, 255, 255, 0.84);
+    --content-h1-background: transparent;
+    /*--content-h1-background: rgba(255, 255, 255, 0.84);*/
 }
 
 * {
@@ -16,10 +19,6 @@
 body, html {
     height: 100vh;
     overflow: hidden;
-}
-
-h1, h2 {
-    padding: 10px;
 }
 
 body {
@@ -36,7 +35,41 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-attachment: fixed;
-    /*background-image: url("images/bg2.png");*/
+}
+
+a{
+    color: var(--light-gray);
+}
+
+h1, h2 {
+    padding: 10px;
+}
+
+button {
+    font-size: calc(1rem + 1vh);
+    font-variant: small-caps;
+    width: calc(calc(1rem + 1vh) * 15);
+    height: max-content;
+    padding: 1rem 2rem;
+    margin: 0.6rem;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    background-color: transparent;
+    color: whitesmoke;
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, .5);
+    letter-spacing: 2px;
+}
+
+
+button:hover,
+button:focus {
+    border-color: var(--card-title-bg);
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, .6);
+    box-shadow: 2px 3px 58px 5px rgba(255, 255, 255, .24);
 }
 
 /* width */
@@ -60,6 +93,7 @@ body {
 }
 
 .welcome {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,37 +118,8 @@ body {
 .welcome .buttons {
     transition: transform 0.5s;
     transform: translateY(1000%);
-
-
     display: flex;
     margin-top: 30px;
-}
-
-.welcome .buttons button {
-    font-size: calc(1rem + 1vh);
-    font-variant: small-caps;
-    width: calc(calc(1rem + 1vh) * 8);
-    height: max-content;
-    padding: 1rem 2rem;
-    margin: 0.6rem;
-    outline: none;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-
-    background-color: transparent;
-    color: whitesmoke;
-    text-shadow: 3px 3px 6px rgba(255, 255, 255, .5);
-    letter-spacing: 2px;
-}
-
-
-.welcome .buttons button:hover,
-.welcome .buttons button:focus {
-    border-color: dodgerblue;
-    text-shadow: 3px 3px 5px rgba(255, 255, 255, .6);
-    box-shadow: 2px 3px 58px 5px rgba(255, 255, 255, .23);
 }
 
 .welcome.navbar {
@@ -141,7 +146,6 @@ body {
     align-items: center;
     justify-content: center;
     width: calc(100vw);
-    /*width: calc(100vw - var(--scrollbar-width) + px);*/
     height: 100vh;
 }
 
@@ -152,20 +156,24 @@ body {
 }
 
 .card {
-    transition: background-color 0.6s, border-color 2s;
-    background-color: rgba(0, 0, 0, 0.23);
+    background-color: rgba(0, 0, 0, 0.24);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .card:hover {
     background-color: rgba(0, 0, 0, 0.55);
-    border-color: rgba(255, 255, 255, 0.24);
+    transition: none;
+    border-color: transparent;
+}
+
+.card button:first-of-type {
+    display: inline-block;
 }
 
 .card .card-title {
-    border-top-left-radius: 11px;
-    border-top-right-radius: 11px;
+    display: none;
+    border-radius: 5px;
     background-color: var(--content-h1-background);
     color: black;
     text-align: center;
@@ -173,6 +181,7 @@ body {
 }
 
 .card .card-body {
+    display: none;
     padding: 0 15px 20px 15px;
 }
 
@@ -188,9 +197,28 @@ body {
 .card .card-body li {
     font-size: 1.1rem;
     margin: 5px 0;
-    color: var(--content-h1-background);
+    color: var(--light-gray);
 }
 
-.card.podcast .card-title {
-    background-color: #1055ff;
+.card.selected {
+    transition: background-color 0.6s, border-color 2s;
+    margin: 80px;
+}
+
+.card.selected:hover {
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+.card.selected button:first-of-type {
+    display: none;
+}
+
+.card.selected .card-title {
+    display: block;
+    border-radius: 11px 11px 0 0;
+    background-color: var(--card-title-bg);
+}
+
+.card.selected .card-body {
+    display: block;
 }

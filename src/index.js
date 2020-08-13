@@ -3,6 +3,7 @@
 
 //stylesheets
 import index from "./index.css";
+import mediaQueries from "./media-queries.css";
 
 
 //images
@@ -29,6 +30,28 @@ function registerListeners() {
             signature.unregisterAnimation();
         };
     });
+
+    content.querySelectorAll(".card button").forEach((cardBtn) => {
+        cardBtn.onclick = () => {
+            const card = cardBtn.parentElement;
+            const className = card.classList[1];
+
+            document.querySelectorAll(`.card:not(.${className})`).forEach((otherCard) => {
+                otherCard.classList.remove("selected");
+            })
+
+            content.prepend(card);
+            card.classList.add("selected");
+        };
+    });
+
+    content.querySelectorAll(".card a").forEach((link) => {
+        link.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openInNewTab(link.href);
+        }
+    })
 }
 
 const background = {
@@ -64,7 +87,6 @@ const background = {
     },
     getNextImage() {
         background.currIndex = getNextArrIndex(background.images, background.currIndex);
-        console.log(background.currIndex)
         return background.images[background.currIndex];
     },
 }
@@ -105,4 +127,9 @@ const signature = {
 
 function getNextArrIndex(array, currIndex) {
     return currIndex >= array.length - 1 ? 0 : currIndex + 1
+}
+
+function openInNewTab(url) {
+    const win = window.open(url, '_blank');
+    win.focus();
 }
