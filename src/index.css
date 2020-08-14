@@ -1,13 +1,12 @@
 /*index.css*/
 
 :root {
-    --main-bc: black;
+    --main-bc: #000000;
     --main-text-color: white;
     --light-gray: rgba(255, 255, 255, 0.84);
-    --card-title-bg: #1055ff;
+    --dark-gray: rgba(255, 255, 255, 0.6);
+    --card-title-bg: #1058ff;
     --scrollbar-width: 4px;
-    --content-h1-background: transparent;
-    /*--content-h1-background: rgba(255, 255, 255, 0.84);*/
 }
 
 * {
@@ -37,7 +36,7 @@ body {
     background-attachment: fixed;
 }
 
-a{
+a {
     color: var(--light-gray);
 }
 
@@ -48,7 +47,7 @@ h1, h2 {
 button {
     font-size: calc(1rem + 1vh);
     font-variant: small-caps;
-    width: calc(calc(1rem + 1vh) * 15);
+    width: max-content;
     height: max-content;
     padding: 1rem 2rem;
     margin: 0.6rem;
@@ -70,6 +69,16 @@ button:focus {
     border-color: var(--card-title-bg);
     text-shadow: 3px 3px 5px rgba(255, 255, 255, .6);
     box-shadow: 2px 3px 58px 5px rgba(255, 255, 255, .24);
+}
+
+::selection {
+    color: black;
+    background-color: white;
+}
+
+::-moz-selection {
+    color: black;
+    background-color: white;
 }
 
 /* width */
@@ -104,7 +113,15 @@ button:focus {
     backdrop-filter: opacity(64%);
     -webkit-backdrop-filter: opacity(64%);
 
-    transition: height 1s;
+    transition: height 1s, opacity 1.2s;
+}
+
+.welcome .punch-line {
+    display: none;
+    transition: opacity 4s;
+    opacity: 0;
+    margin: 10px 10px 10px 22px;
+    color: var(--dark-gray);
 }
 
 .welcome .signature {
@@ -122,16 +139,27 @@ button:focus {
     margin-top: 30px;
 }
 
+.welcome .buttons button {
+    width: calc(calc(1rem + 1vh) * 9);
+}
+
 .welcome.navbar {
     flex-direction: row;
     /*justify-content: flex-start;*/
     position: fixed;
     top: 0;
     height: 100px;
+
+    /*transition: height 1s, opacity 1.1s;*/
+}
+
+.welcome.navbar .punch-line.shown {
+    opacity: 1;
 }
 
 .welcome.navbar .signature {
     height: 60px;
+    margin: 20px 20px 5px 20px;
 }
 
 .welcome.navbar button {
@@ -145,36 +173,42 @@ button:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: calc(100vw);
+    width: 100vw;
     height: 100vh;
 }
 
 .content.shown {
-    transition: transform 1s;
+    transition: transform 1s, width 0.4s;
     will-change: transform;
     transform: translateY(0) scale(1, 1);
 }
 
 .card {
-    background-color: rgba(0, 0, 0, 0.24);
+    width: 25%;
+    min-width: max-content;
+    max-width: 90%;
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
 }
 
 .card:hover {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: transparent;
     transition: none;
     border-color: transparent;
 }
 
 .card button:first-of-type {
     display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 .card .card-title {
     display: none;
     border-radius: 5px;
-    background-color: var(--content-h1-background);
     color: black;
     text-align: center;
     font-variant: small-caps;
@@ -191,7 +225,7 @@ button:focus {
 
 .card .card-body ul {
     list-style: none;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
 }
 
 .card .card-body li {
@@ -207,6 +241,7 @@ button:focus {
 
 .card.selected:hover {
     border-color: rgba(255, 255, 255, 0.24);
+    background-color: rgba(0, 0, 0, 0.56);
 }
 
 .card.selected button:first-of-type {

@@ -1,9 +1,13 @@
 //index.js
 "use strict";
 
+//scripts
+import {Nav} from "./lib/nav";
+
 //stylesheets
 import index from "./index.css";
 import mediaQueries from "./media-queries.css";
+import navcss from "./lib/nav.css";
 
 
 //images
@@ -28,6 +32,21 @@ function registerListeners() {
             welcome.classList.add("navbar");
 
             signature.unregisterAnimation();
+
+            //create right-side navbar
+            const nav = new Nav();
+            const punchLine = welcome.querySelector(".punch-line");
+            welcome.style.opacity = "0";
+            setTimeout(() => {
+                welcome.style.justifyContent = "flex-start"
+                welcome.style.opacity = "1"
+
+                punchLine.style.display = "block";
+                setTimeout(() => {
+                    welcome.querySelector(".punch-line").classList.add("shown");
+                }, 300)
+            }, 1000)
+            // nav.list.classList.add("shown")
         };
     });
 
@@ -38,6 +57,7 @@ function registerListeners() {
 
             document.querySelectorAll(`.card:not(.${className})`).forEach((otherCard) => {
                 otherCard.classList.remove("selected");
+                otherCard.style.display = "none"
             })
 
             content.prepend(card);

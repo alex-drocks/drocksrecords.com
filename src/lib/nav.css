@@ -1,0 +1,143 @@
+/*nav.css*/
+
+/*invisible html container*/
+nav {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+}
+
+/*open close btn that contains the svg icon*/
+nav > button.nav-btn {
+    z-index: 4; /*alway show on top of <ul> which has z-index of 2*/
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    width: min-content;
+    height: min-content;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    transition: none;
+    border-radius: 50%;
+}
+
+/*the svg icon within the open/close button*/
+nav button.nav-btn svg.nav-btn__icon {
+    fill: white;
+    border-radius: 50%;
+}
+
+nav button.nav-btn:focus svg.nav-btn__icon,
+nav button.nav-btn:hover svg.nav-btn__icon {
+    background-color: var(--card-title-bg);
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+/*the icon within the open close btn*/
+nav svg.nav-btn__icon {
+    width: 48px;
+    height: 48px;
+}
+
+/*the actual content of the nav*/
+nav ul.nav-list {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    align-items: center;
+
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 21vw;
+    min-width: min-content;
+    height: 100vh;
+    padding: 100px 2px;
+
+    list-style: none;
+    background-color: rgba(0,0,0,0.61);
+    border-left: 1px solid white;
+    box-shadow: 0 0 70px rgba(255,255,255,.25);
+
+    will-change: transform;
+    transition: transform 0.12s, background-color 1s, box-shadow 1s;
+    /*opacity: 0;*/
+    transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform-origin: top right;
+}
+
+nav ul.nav-list.shown {
+    /*opacity: 1;*/
+    /*transition: background-color 1s, box-shadow 1s;*/
+    transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+}
+
+nav:hover ul.nav-list.shown {
+    background-color: rgba(0,0,0,0.76);
+    box-shadow: 0 0 70px rgba(255,255,255,.36);
+}
+
+nav ul.nav-list li {
+    padding: 10px 35px;
+    max-width: 420px;
+}
+
+nav ul.nav-list li a {
+    color: white;
+}
+
+nav ul.nav-list li.buttons button {
+    margin-top: 30px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, .85);
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
+}
+
+nav ul.nav-list li.buttons button:hover {
+    background-color: var(--card-title-bg);
+    color: black;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, .6);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, .2);
+}
+
+nav li.main-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 2.1s;
+}
+
+nav li.main-logo img.logo-link {
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    margin: 10px;
+}
+
+
+@media (max-height: 500px) {
+    nav ul.nav-list.shown {
+        padding: 0;
+    }
+    nav ul.nav-list.shown li a button {
+        margin-top: 10px;
+    }
+}

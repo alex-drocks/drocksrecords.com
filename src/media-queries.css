@@ -1,4 +1,7 @@
 /*media-queries.css*/
-/*@media (orientation: portrait) {*/
-/*    */
-/*}*/
+@media (orientation: portrait) {
+    nav ul.nav-list {
+        width: 40vw !important;
+        background-color: rgba(0,0,0,.77);
+    }
+}
