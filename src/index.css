@@ -4,7 +4,7 @@
     --main-bc: #000000;
     --main-text-color: white;
     --light-gray: rgba(255, 255, 255, 0.84);
-    --dark-gray: rgba(255, 255, 255, 0.6);
+    --dark-gray: rgba(255, 255, 255, 0.55);
     --card-title-bg: #1058ff;
     --scrollbar-width: 4px;
 }
@@ -15,8 +15,10 @@
     font-family: Arial, sans-serif;
 }
 
-body, html {
+html,
+body {
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -102,18 +104,15 @@ button:focus {
 }
 
 .welcome {
-    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    /*reduce body background img opacity*/
-    backdrop-filter: opacity(64%);
-    -webkit-backdrop-filter: opacity(64%);
+    background-color: rgba(0, 0, 0, .35);
 
-    transition: height 1s, opacity 1.2s;
+    transition: height 1s, opacity 1.2s, background-color 2s;
 }
 
 .welcome .punch-line {
@@ -129,11 +128,11 @@ button:focus {
 
     margin: 20px;
     max-width: 900px;
-    transition: filter 3s ease-in-out, margin-bottom 0.2s, transform 0.6s;
+    transition: filter 3s ease-in-out, margin-bottom 0.2s, transform 0.7s;
 }
 
 .welcome .buttons {
-    transition: transform 0.5s;
+    transition: transform 0.7s;
     transform: translateY(1000%);
     display: flex;
     margin-top: 30px;
@@ -143,31 +142,30 @@ button:focus {
     width: calc(calc(1rem + 1vh) * 9);
 }
 
-.welcome.navbar {
+.welcome.anchored-top {
     flex-direction: row;
-    /*justify-content: flex-start;*/
     position: fixed;
     top: 0;
-    height: 100px;
+    height: 130px;
 
-    /*transition: height 1s, opacity 1.1s;*/
 }
 
-.welcome.navbar .punch-line.shown {
+.welcome.anchored-top .punch-line.shown {
     opacity: 1;
 }
 
-.welcome.navbar .signature {
-    height: 60px;
+.welcome.anchored-top .signature {
+    height: 62px;
     margin: 20px 20px 5px 20px;
 }
 
-.welcome.navbar button {
+.welcome.anchored-top button {
     display: none;
 }
 
 /*main slide-show styled content presentation*/
 .content {
+    z-index: 10;
     transform: translateY(100%) scale(0, 0);
     display: flex;
     flex-direction: column;
@@ -236,7 +234,7 @@ button:focus {
 
 .card.selected {
     transition: background-color 0.6s, border-color 2s;
-    margin: 80px;
+    /*margin: 80px;*/
 }
 
 .card.selected:hover {

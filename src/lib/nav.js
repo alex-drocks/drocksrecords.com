@@ -24,15 +24,19 @@ export class Nav {
             //<ul>
             nav.list.className = "nav-list";
             nav.list.innerHTML = `
-            <li><i class="punch-line">Mixage, composition et formation audio...</i></li>
-            <li class="buttons">
-                <a href="./"><button tabindex="-1">Page principale</button></a>
-                <a href="#"><button tabindex="-1">Services Podcasts</button></a>
-                <a href="#"><button tabindex="-1">Nos productions</button></a>
-                <a href="#"><button tabindex="-1">À propos</button></a>
-                <a href="#"><button tabindex="-1">Contactez-nous</button></a>
+            <li class="main-logo" style="opacity: 0">
+            <a href="./"><img src="../images/welcome-signature-logo.png" class="logo-link" alt="Logo"></a>
+            © D Rocks Records 2020
             </li>
-            <li class="main-logo" style="opacity: 0"><a href="./"><img src="../images/welcome-signature-logo.png" class="logo-link" alt="Logo"></a>© D Rocks Records 2020</li>
+
+            <li class="buttons">
+                <a href="#"><button data-src="about" tabindex="-1">À propos</button></a>
+                <a href="#"><button data-src="podcast" tabindex="-1">Podcasts</button></a>
+                <a href="#"><button data-src="productions" tabindex="-1">Nos productions</button></a>
+                <a href="#"><button data-src="contact" tabindex="-1">Contactez-nous</button></a>
+            </li>
+            
+            <li><i class="punch-line" style="color: var(--dark-gray);">Mixage, composition et formation audio...</i></li>
             `;
         })();
 
@@ -50,19 +54,19 @@ export class Nav {
     }
 
     toggleVisibility() {
-        const topNavBar = document.querySelector(".welcome.navbar");
-        const content = document.querySelector(".content.shown");
+        const topNavBar = document.querySelector(".welcome.anchored-top");
+        // const content = document.querySelector(".content.shown");
         if (Nav.self.list.classList[1] !== "shown") {
             Nav.self.list.classList.add("shown");
             Nav.self.list.querySelector(".main-logo").style.opacity = "1";
 
-            content.style.width = `calc(100vw - ${Nav.self.list.offsetWidth}px)`;
+            // content.style.width = `calc(100vw - ${Nav.self.list.offsetWidth}px)`;
             topNavBar.style.opacity = `0`;
         } else {
             Nav.self.list.classList.remove("shown");
             Nav.self.list.querySelector(".main-logo").style.opacity = "0";
 
-            content.style.width = "100vw";
+            // content.style.width = "100vw";
             topNavBar.style.opacity = `1`;
         }
     }

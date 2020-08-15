@@ -42,8 +42,8 @@ nav button.nav-btn:hover svg.nav-btn__icon {
 
 /*the icon within the open close btn*/
 nav svg.nav-btn__icon {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
 }
 
 /*the actual content of the nav*/
@@ -62,9 +62,9 @@ nav ul.nav-list {
     padding: 100px 2px;
 
     list-style: none;
-    background-color: rgba(0,0,0,0.61);
+    background-color: rgba(0,0,0,0.62);
     border-left: 1px solid white;
-    box-shadow: 0 0 70px rgba(255,255,255,.25);
+    box-shadow: 0 0 72px rgba(255,255,255,.28);
 
     will-change: transform;
     transition: transform 0.12s, background-color 1s, box-shadow 1s;
@@ -85,7 +85,7 @@ nav ul.nav-list.shown {
 
 nav:hover ul.nav-list.shown {
     background-color: rgba(0,0,0,0.76);
-    box-shadow: 0 0 70px rgba(255,255,255,.36);
+    box-shadow: 0 0 72px rgba(255,255,255,.37);
 }
 
 nav ul.nav-list li {
@@ -95,6 +95,10 @@ nav ul.nav-list li {
 
 nav ul.nav-list li a {
     color: white;
+}
+
+nav ul.nav-list li.buttons {
+    margin-bottom: 30px;
 }
 
 nav ul.nav-list li.buttons button {
@@ -121,6 +125,8 @@ nav li.main-logo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: var(--dark-gray);
+    margin-top: 20px;
 
     transition: opacity 2.1s;
 }

@@ -26,41 +26,43 @@ window.onload = () => {
 function registerListeners() {
     const welcome = document.querySelector(".welcome");
     const content = document.querySelector(".content");
+
+    //welcome buttons actions
     welcome.querySelectorAll("button").forEach((btn) => {
         btn.onclick = () => {
             content.classList.add("shown");
-            welcome.classList.add("navbar");
-
+            welcome.classList.add("anchored-top");
             signature.unregisterAnimation();
-
             //create right-side navbar
-            const nav = new Nav();
-            const punchLine = welcome.querySelector(".punch-line");
-            welcome.style.opacity = "0";
+            // const nav = new Nav();
+            // nav.toggleVisibility();
+            welcome.style.opacity = "0"; //trigger CSS opacity transition
             setTimeout(() => {
-                welcome.style.justifyContent = "flex-start"
+                //smooth switch signature to left side of screen
+                welcome.style.justifyContent = "flex-start" //brutal change only at opacity of 0%
                 welcome.style.opacity = "1"
-
-                punchLine.style.display = "block";
+                // welcome.style.display = "none"
+                welcome.style.backgroundColor = "transparent";
+                //"Mixage, composition et formation audio..."
+                welcome.querySelector(".punch-line").style.display = "block";
                 setTimeout(() => {
                     welcome.querySelector(".punch-line").classList.add("shown");
-                }, 300)
+                }, 200)
             }, 1000)
-            // nav.list.classList.add("shown")
         };
     });
 
+    //content cards actions
     content.querySelectorAll(".card button").forEach((cardBtn) => {
         cardBtn.onclick = () => {
             const card = cardBtn.parentElement;
-            const className = card.classList[1];
-
-            document.querySelectorAll(`.card:not(.${className})`).forEach((otherCard) => {
+            document.querySelectorAll(`.card:not(.${card.classList[1]})`).forEach((otherCard) => {
                 otherCard.classList.remove("selected");
-                otherCard.style.display = "none"
+                // otherCard.style.display = "none";
             })
-
-            content.prepend(card);
+            // document.body.style.height = "100%";
+            // document.body.style.overflowY = "auto";
+            // content.prepend(card);
             card.classList.add("selected");
         };
     });
