@@ -2,6 +2,18 @@
 @media (orientation: portrait) {
     nav ul.nav-list {
         width: 40vw !important;
-        background-color: rgba(0,0,0,.77);
+        background-color: rgba(0, 0, 0, .77);
+    }
+
+    .welcome .background-fx {
+        height: 65%;
+    }
+
+    .welcome.has-been-clicked .background-fx {
+        height: 200%;
+    }
+
+    .card {
+        width: 90vw;
     }
 }

@@ -5,9 +5,10 @@
 import {Nav} from "./lib/nav";
 
 //stylesheets
-import index from "./index.css";
-import mediaQueries from "./media-queries.css";
-import navcss from "./lib/nav.css";
+import commonCss from "./lib/common.css";
+import indexCss from "./index.css";
+import mediaQueriesCss from "./media-queries.css";
+import navCss from "./lib/nav.css";
 
 
 //images
@@ -31,24 +32,22 @@ function registerListeners() {
     welcome.querySelectorAll("button").forEach((btn) => {
         btn.onclick = () => {
             content.classList.add("shown");
-            welcome.classList.add("anchored-top");
+            welcome.classList.add("has-been-clicked");
             signature.unregisterAnimation();
             //create right-side navbar
-            // const nav = new Nav();
-            // nav.toggleVisibility();
+            const nav = new Nav();
             welcome.style.opacity = "0"; //trigger CSS opacity transition
             setTimeout(() => {
                 //smooth switch signature to left side of screen
                 welcome.style.justifyContent = "flex-start" //brutal change only at opacity of 0%
                 welcome.style.opacity = "1"
-                // welcome.style.display = "none"
                 welcome.style.backgroundColor = "transparent";
                 //"Mixage, composition et formation audio..."
                 welcome.querySelector(".punch-line").style.display = "block";
                 setTimeout(() => {
                     welcome.querySelector(".punch-line").classList.add("shown");
                 }, 200)
-            }, 1000)
+            }, 1100)
         };
     });
 
@@ -56,14 +55,14 @@ function registerListeners() {
     content.querySelectorAll(".card button").forEach((cardBtn) => {
         cardBtn.onclick = () => {
             const card = cardBtn.parentElement;
-            document.querySelectorAll(`.card:not(.${card.classList[1]})`).forEach((otherCard) => {
-                otherCard.classList.remove("selected");
-                // otherCard.style.display = "none";
-            })
-            // document.body.style.height = "100%";
-            // document.body.style.overflowY = "auto";
+            // document.querySelectorAll(`.card:not(.${card.classList[1]})`).forEach((otherCard) => {
+            //     otherCard.classList.remove("selected");
+            // })
+            document.body.style.height = "";
+            document.body.style.overflowY = "auto";
             // content.prepend(card);
             card.classList.add("selected");
+            card.scrollIntoView({behavior: "smooth"})
         };
     });
 
@@ -96,7 +95,7 @@ const background = {
         //start animating drop-shadow color
         background.intervalID = setInterval(() => {
             background.setImage();
-        }, 3300);
+        }, 3000);
     },
     setImage() {
         background.image = background.getNextImage();
@@ -122,14 +121,13 @@ const signature = {
         signature.html.src = signatureImg;
         signature.setDropShadowColor();
         signature.registerAnimation();
-
         signature.html.style.transform = "translateY(0)";
     },
     registerAnimation() {
         //start animating drop-shadow color
         signature.intervalID = setInterval(() => {
             signature.setDropShadowColor();
-        }, 3000);
+        }, 2000);
     },
     unregisterAnimation() {
         //stop animating drop-shadow color

@@ -31,11 +31,12 @@ nav > button.nav-btn {
 nav button.nav-btn svg.nav-btn__icon {
     fill: white;
     border-radius: 50%;
+    transform: rotateZ(20deg);
 }
 
 nav button.nav-btn:focus svg.nav-btn__icon,
 nav button.nav-btn:hover svg.nav-btn__icon {
-    background-color: var(--card-title-bg);
+    background-color: var(--blue-light);
     transition: background-color .5s;
     cursor: pointer;
 }
@@ -114,7 +115,7 @@ nav ul.nav-list li.buttons button {
 }
 
 nav ul.nav-list li.buttons button:hover {
-    background-color: var(--card-title-bg);
+    background-color: var(--blue-light);
     color: black;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, .6);
     text-shadow: 1px 2px 2px rgba(0, 0, 0, .2);
