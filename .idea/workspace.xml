@@ -10,11 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84dc2adb-6d93-49d8-b964-1c124e5a472e" name="Default Changelist" comment="- right-side navbar attempt">
-      <change afterPath="$PROJECT_DIR$/src/lib/common.css" afterDir="false" />
+    <list default="true" id="84dc2adb-6d93-49d8-b964-1c124e5a472e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/b83dccb66a9bf9b18b8d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/f2735ab6a114ca10b755.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3770952c8f085237fb4e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/a2135f9aad94b3efb478.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/bg1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/bg2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/bg3.png" beforeDir="false" />
@@ -23,9 +22,7 @@
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/nav.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media-queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/media-queries.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
       <recent name="C:\Users\Alex\Desktop\local-dev-tests\drocksrecords" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -127,7 +124,8 @@
       <workItem from="1597426059209" duration="5268000" />
       <workItem from="1597499544204" duration="1541000" />
       <workItem from="1597524476111" duration="5736000" />
-      <workItem from="1597597273937" duration="10618000" />
+      <workItem from="1597597273937" duration="10794000" />
+      <workItem from="1597615895075" duration="3210000" />
     </task>
     <task id="LOCAL-00001" summary="push #2 init testing">
       <created>1597104274382</created>
@@ -185,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597431303845</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- new style attempt 2...">
+      <created>1597607950203</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597607950203</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +218,8 @@
     <MESSAGE value="- Refactored index.js to use object oriented syntax&#10;- Fully working auto-color changers" />
     <MESSAGE value="- added new content cards" />
     <MESSAGE value="- right-side navbar attempt" />
-    <option name="LAST_COMMIT_MESSAGE" value="- right-side navbar attempt" />
+    <MESSAGE value="- new style attempt 2..." />
+    <option name="LAST_COMMIT_MESSAGE" value="- new style attempt 2..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1597103195417">
@@ -224,10 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597230239750" />
-    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2" timestamp="1597602585738">
+    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2" timestamp="1597607949703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597602585738" />
+    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597607949703" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597501331724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -240,30 +246,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="830" y="422" key="Github.ShareDialog/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597103617997" />
-    <state width="1899" height="231" key="GridCell.Tab.0.bottom" timestamp="1597597621208">
+    <state width="1899" height="231" key="GridCell.Tab.0.bottom" timestamp="1597608079915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="231" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597597621208" />
-    <state width="1899" height="231" key="GridCell.Tab.0.center" timestamp="1597597621207">
+    <state width="1899" height="231" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597608079915" />
+    <state width="1899" height="231" key="GridCell.Tab.0.center" timestamp="1597608079915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="231" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597597621207" />
-    <state width="1899" height="231" key="GridCell.Tab.0.left" timestamp="1597597621207">
+    <state width="1899" height="231" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597608079915" />
+    <state width="1899" height="231" key="GridCell.Tab.0.left" timestamp="1597608079915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="231" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597597621207" />
-    <state width="1899" height="231" key="GridCell.Tab.0.right" timestamp="1597597621207">
+    <state width="1899" height="231" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597608079915" />
+    <state width="1899" height="231" key="GridCell.Tab.0.right" timestamp="1597608079915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="231" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597597621207" />
+    <state width="1899" height="231" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597608079915" />
     <state x="681" y="261" width="585" height="540" key="StructurePopup" timestamp="1597102777980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="585" height="540" key="StructurePopup/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597102777980" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597431305314">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1597607951828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597431305314" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597607951828" />
     <state x="777" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597113385229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -272,9 +278,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597105228861" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597606010837">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597618913360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597606010837" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597618913360" />
   </component>
 </project>

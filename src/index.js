@@ -35,7 +35,7 @@ function registerListeners() {
             welcome.classList.add("has-been-clicked");
             signature.unregisterAnimation();
             //create right-side navbar
-            const nav = new Nav();
+            new Nav();
             welcome.style.opacity = "0"; //trigger CSS opacity transition
             setTimeout(() => {
                 //smooth switch signature to left side of screen
@@ -60,7 +60,6 @@ function registerListeners() {
             // })
             document.body.style.height = "";
             document.body.style.overflowY = "auto";
-            // content.prepend(card);
             card.classList.add("selected");
             card.scrollIntoView({behavior: "smooth"})
         };
@@ -127,17 +126,26 @@ const signature = {
         //start animating drop-shadow color
         signature.intervalID = setInterval(() => {
             signature.setDropShadowColor();
-        }, 2000);
+        }, 3000);
     },
     unregisterAnimation() {
         //stop animating drop-shadow color
         clearInterval(signature.intervalID);
         signature.html.style.filter = "none";
+        const bgFx = document.querySelector(".background-fx");
+        bgFx.style.borderTopColor = "var(--blue)";
     },
     setDropShadowColor() {
+        const newColor = signature.getNextColor();
         signature.html.style.filter = `
-        drop-shadow(0.3rem 0.3rem 0.${Math.floor((Math.random() * 6) + 2)}rem #${signature.getNextColor()})
-        `
+        drop-shadow(0.3rem 0.3rem 0.${Math.floor((Math.random() * 6) + 2)}rem #${newColor})
+        `;
+
+        const bgFx = document.querySelector(".background-fx");
+        bgFx.style.borderTopColor = `#${newColor}`;
+        setTimeout(() => {
+            bgFx.style.borderBottomColor = `#${newColor}`;
+        }, 2000)
     },
     getNextColor() {
         signature.currIndex = getNextArrIndex(signature.colors, signature.currIndex);

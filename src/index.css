@@ -18,7 +18,7 @@ body {
     background-attachment: fixed;
 }
 
-h1, h2, h3 {
+h1, h2 {
     padding: 10px;
 }
 
@@ -70,13 +70,13 @@ button:focus {
     z-index: -1;
     position: fixed;
     background-color: rgba(0, 0, 0, .25);
-    border-top: 2px solid rgba(0, 212, 255, 0.77);
-    border-bottom: 4px solid rgba(0, 212, 255, 0.75);
+    border-top: 2px solid rgba(0, 212, 255, 0);
+    border-bottom: 4px solid rgba(0, 212, 255, 0);
     box-shadow: 0 0 500px rgba(0, 212, 255, .52);
     left: -44%;
     width: 200%;
     height: 108%;
-    transition: transform 1s, background-color 5s, height 2.8s;
+    transition: transform 1s, background-color 5s, height 2.8s, border-top-color 3s, border-bottom-color 3s;
     transform: rotateZ(30deg);
 }
 
@@ -84,7 +84,7 @@ button:focus {
     transform: translateY(-1000%);
     margin: 50px;
     max-width: 900px;
-    transition: margin-bottom 0.2s, transform 0.7s;
+    transition: margin-bottom 0.2s, transform 0.7s, filter 2s;
 }
 
 .welcome .buttons {
@@ -146,7 +146,6 @@ button:focus {
 
 /*main slide-show styled content presentation*/
 .content {
-    z-index: 10;
     transform: translateY(100%) scale(0, 0);
     display: flex;
     flex-direction: column;
