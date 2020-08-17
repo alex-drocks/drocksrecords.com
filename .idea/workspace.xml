@@ -10,16 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84dc2adb-6d93-49d8-b964-1c124e5a472e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="84dc2adb-6d93-49d8-b964-1c124e5a472e" name="Default Changelist" comment="- new style attempt 3...">
+      <change beforePath="$PROJECT_DIR$/.idea/drocksrecords.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/drocksrecords.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/a586858c87ab387a3ef3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/d9be243761a16eed23fb.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/bg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/bg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/bg3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/welcome-signature-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +49,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -103,6 +97,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Alex\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="84dc2adb-6d93-49d8-b964-1c124e5a472e" name="Default Changelist" comment="" />
@@ -123,7 +120,7 @@
       <workItem from="1597524476111" duration="5736000" />
       <workItem from="1597597273937" duration="10794000" />
       <workItem from="1597615895075" duration="13235000" />
-      <workItem from="1597662481036" duration="5765000" />
+      <workItem from="1597662481036" duration="6170000" />
     </task>
     <task id="LOCAL-00001" summary="push #2 init testing">
       <created>1597104274382</created>
@@ -255,10 +252,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597230239750" />
-    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2" timestamp="1597628889869">
+    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2" timestamp="1597686915545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597628889869" />
+    <state x="360" y="13" width="1297" height="1012" key="CommitChangelistDialog2/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597686915545" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597501331724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -287,6 +284,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="231" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597670246754" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1597687062051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.-69.1920.1080/-1920.0.1920.1080@0.0.1920.1040" timestamp="1597687062051" />
     <state x="681" y="261" width="585" height="540" key="StructurePopup" timestamp="1597102777980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
