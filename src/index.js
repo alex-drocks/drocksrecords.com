@@ -5,11 +5,10 @@
 import {Nav} from "./lib/nav";
 
 //stylesheets
-import commonCss from "./lib/common.css";
-import indexCss from "./index.css";
-import mediaQueriesCss from "./lib/media-queries.css";
-import navCss from "./lib/nav.css";
-
+import "./lib/common.css";
+import "./index.css";
+import "./lib/media-queries.css";
+import "./lib/nav.css";
 
 //images
 import signatureImg from "./images/welcome-signature-logo.png"
@@ -21,7 +20,7 @@ import bg3 from "./images/bg3.png";
 window.onload = () => {
     registerEventListeners();
     background.init();
-    signature.init();
+    colorAnimation.init();
 }
 
 function registerEventListeners() {
@@ -33,24 +32,19 @@ function registerEventListeners() {
     welcome.querySelectorAll("button").forEach((btn) => {
         btn.onclick = () => {
             const contentLang = btn.dataset.lang;
-            content = document.querySelector(`.content.lang-${contentLang}`);
-            const otherHiddenLang = document.querySelector(
-                `.content.lang-${contentLang === "francais" ? "english" : "francais"}`
-            );
-            otherHiddenLang.remove();
+            content = setSelectedLanguageContent(contentLang);
 
             content.classList.add("shown");
             welcome.classList.add("has-been-clicked");
-            signature.unregisterAnimation();
+            colorAnimation.unregisterAnimation();
             // signature.html.style.display = "none";
 
-            //create right-side navbar
+            //create right-side navbar like price feature
             new Nav();
             welcome.style.opacity = "0"; //trigger CSS opacity transition
             setTimeout(() => {
                 //smooth switch signature to left side of screen
                 // signature.html.style.display = "";
-
                 welcome.style.justifyContent = "flex-start" //brutal change only at opacity of 0%
                 welcome.style.opacity = "1"
                 welcome.style.backgroundColor = "transparent";
@@ -63,17 +57,31 @@ function registerEventListeners() {
                     document.body.style.height = "";
                     document.body.style.overflowY = "auto";
                 }, 200)
-            }, 1200)
+            }, 1200);
+
+            function setSelectedLanguageContent(language) {
+                const otherHiddenLang = document.querySelector(
+                    `.content.lang-${language === "francais" ? "english" : "francais"}`
+                );
+                otherHiddenLang.remove();
+                setPunchLineText(language);
+                return document.querySelector(`.content.lang-${language}`);
+
+                function setPunchLineText(language) {
+                    const punchLine = document.querySelector(".welcome .punch-line");
+                    if (language === "francais") {
+                        punchLine.textContent = "Mixage, composition et formation audio...";
+                    } else if (language === "english") {
+                        punchLine.textContent = "Mixing, composition and audio teaching...";
+                    }
+                }
+            }
         };
     });
 
     //content cards actions
     document.querySelectorAll(".card").forEach((card) => {
         card.querySelector("button").onclick = () => {
-            // const card = card.parentElement;
-            // document.querySelectorAll(`.card:not(.${card.classList[1]})`).forEach((otherCard) => {
-            //     otherCard.classList.remove("selected");
-            // })
             card.classList.add("selected");
             card.scrollIntoView({behavior: "smooth"})
         };
@@ -126,45 +134,50 @@ const background = {
     },
 }
 
-const signature = {
-    html: document.querySelector(".welcome .signature"),
+const colorAnimation = {
+    html: {
+        signature: document.querySelector(".welcome .signature"),
+        bgFx: document.querySelector(".welcome .background-fx"),
+    },
     colors: ["1010ff", "dd00ff", "1095ff", "101010", "ff0010", "8080ff"],
     currIndex: -1,
     intervalID: undefined,
     init() {
-        signature.html.src = signatureImg;
-        signature.setDropShadowColor();
-        signature.registerAnimation();
-        signature.html.style.transform = "translateY(0)";
+        colorAnimation.html.signature.src = signatureImg;
+        colorAnimation.setDropShadowColor();
+        colorAnimation.registerAnimation();
+        colorAnimation.html.signature.style.transform = "translateY(0)";
     },
     registerAnimation() {
         //start animating drop-shadow color
-        signature.intervalID = setInterval(() => {
-            signature.setDropShadowColor();
+        colorAnimation.intervalID = setInterval(() => {
+            colorAnimation.setDropShadowColor();
         }, 3000);
     },
     unregisterAnimation() {
         //stop animating drop-shadow color
-        clearInterval(signature.intervalID);
-        signature.html.style.filter = "none";
-        const bgFx = document.querySelector(".background-fx");
-        bgFx.style.borderTopColor = "var(--blue)";
+        clearInterval(colorAnimation.intervalID);
+        colorAnimation.html.signature.style.filter = "none";
+        colorAnimation.html.bgFx.style.borderTopColor = "var(--blue)";
     },
     setDropShadowColor() {
-        const newColor = signature.getNextColor();
-        signature.html.style.filter = `
-        drop-shadow(0.3rem 0.3rem 0.${Math.floor((Math.random() * 6) + 2)}rem #${newColor})
-        `;
+        const newColor = colorAnimation.getNextColor();
 
-        const bgFx = document.querySelector(".background-fx");
-        bgFx.style.borderTopColor = `#${newColor}`;
+        //set signature logo contour color (drop-shadow)
+        colorAnimation.html.signature.style.filter = `
+        drop-shadow(0.3rem 0.3rem 0.${Math.floor((Math.random() * 6) + 2)}rem #${newColor})`;
+
+        //set parallel bg lines color async with delayed timers
         setTimeout(() => {
-            bgFx.style.borderBottomColor = `#${newColor}`;
-        }, 2000)
+            colorAnimation.html.bgFx.style.borderTopColor = `#${newColor}`;
+            setTimeout(() => {
+                colorAnimation.html.bgFx.style.borderBottomColor = `#${newColor}`;
+            }, 2000)
+        }, 700)
     },
     getNextColor() {
-        signature.currIndex = getNextArrIndex(signature.colors, signature.currIndex);
-        return signature.colors[signature.currIndex]
+        colorAnimation.currIndex = getNextArrIndex(colorAnimation.colors, colorAnimation.currIndex);
+        return colorAnimation.colors[colorAnimation.currIndex]
     },
 }
 
