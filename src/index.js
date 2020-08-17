@@ -7,7 +7,7 @@ import {Nav} from "./lib/nav";
 //stylesheets
 import commonCss from "./lib/common.css";
 import indexCss from "./index.css";
-import mediaQueriesCss from "./media-queries.css";
+import mediaQueriesCss from "./lib/media-queries.css";
 import navCss from "./lib/nav.css";
 
 
