@@ -19,59 +19,73 @@ import bg3 from "./images/bg3.png";
 
 
 window.onload = () => {
-    registerListeners();
+    registerEventListeners();
     background.init();
     signature.init();
 }
 
-function registerListeners() {
-    const welcome = document.querySelector(".welcome");
-    const content = document.querySelector(".content");
+function registerEventListeners() {
+    //define language from which button was clicked
+    let content;
 
     //welcome buttons actions
+    const welcome = document.querySelector(".welcome");
     welcome.querySelectorAll("button").forEach((btn) => {
         btn.onclick = () => {
+            const contentLang = btn.dataset.lang;
+            content = document.querySelector(`.content.lang-${contentLang}`);
+            const otherHiddenLang = document.querySelector(
+                `.content.lang-${contentLang === "francais" ? "english" : "francais"}`
+            );
+            otherHiddenLang.remove();
+
             content.classList.add("shown");
             welcome.classList.add("has-been-clicked");
             signature.unregisterAnimation();
+            // signature.html.style.display = "none";
+
             //create right-side navbar
             new Nav();
             welcome.style.opacity = "0"; //trigger CSS opacity transition
             setTimeout(() => {
                 //smooth switch signature to left side of screen
+                // signature.html.style.display = "";
+
                 welcome.style.justifyContent = "flex-start" //brutal change only at opacity of 0%
                 welcome.style.opacity = "1"
                 welcome.style.backgroundColor = "transparent";
+                document.querySelector(".welcome .background-fx").style.height = "635px"
+
                 //"Mixage, composition et formation audio..."
                 welcome.querySelector(".punch-line").style.display = "block";
                 setTimeout(() => {
                     welcome.querySelector(".punch-line").classList.add("shown");
+                    document.body.style.height = "";
+                    document.body.style.overflowY = "auto";
                 }, 200)
-            }, 1100)
+            }, 1200)
         };
     });
 
     //content cards actions
-    content.querySelectorAll(".card button").forEach((cardBtn) => {
-        cardBtn.onclick = () => {
-            const card = cardBtn.parentElement;
+    document.querySelectorAll(".card").forEach((card) => {
+        card.querySelector("button").onclick = () => {
+            // const card = card.parentElement;
             // document.querySelectorAll(`.card:not(.${card.classList[1]})`).forEach((otherCard) => {
             //     otherCard.classList.remove("selected");
             // })
-            document.body.style.height = "";
-            document.body.style.overflowY = "auto";
             card.classList.add("selected");
             card.scrollIntoView({behavior: "smooth"})
         };
-    });
-
-    content.querySelectorAll(".card a").forEach((link) => {
-        link.onclick = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            openInNewTab(link.href);
+        const externLink = card.querySelector("a");
+        if (externLink) {
+            externLink.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                openInNewTab(externLink.href);
+            }
         }
-    })
+    });
 }
 
 const background = {
@@ -88,6 +102,7 @@ const background = {
         //force immediate animation transition
         background.setImage();
 
+        document.querySelector(".welcome .background-fx").style.height = "80%"
         document.querySelector(".welcome .buttons").style.transform = "translateX(0)";
     },
     registerAnimation() {

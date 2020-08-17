@@ -1,9 +1,9 @@
 :root {
     --main-bc: #000000;
     --main-text-color: white;
-    --light-gray: rgba(255, 255, 255, 0.84);
+    --light-gray: rgba(255, 255, 255, 0.83);
     --dark-gray: rgba(255, 255, 255, 0.55);
-    --scrollbar-width: 4px;
+    --scrollbar-width: 3px;
     --blue-lighter:#00A3FF;
     --blue-light: #005FFF;
     --blue: #0018d9;

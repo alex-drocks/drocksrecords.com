@@ -31,7 +31,7 @@ nav > button.nav-btn {
 nav button.nav-btn svg.nav-btn__icon {
     fill: white;
     border-radius: 50%;
-    transform: rotateZ(20deg);
+    transform: rotateZ(22deg);
 }
 
 nav button.nav-btn:focus svg.nav-btn__icon,
@@ -51,7 +51,7 @@ nav svg.nav-btn__icon {
 nav ul.nav-list {
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     align-items: center;
 
     position: absolute;
@@ -59,7 +59,7 @@ nav ul.nav-list {
     right: -5px;
     width: 21vw;
     min-width: min-content;
-    height: 100vh;
+    height: calc(100vh + 5px);
     padding: 100px 2px;
 
     list-style: none;
@@ -147,4 +147,13 @@ nav li.main-logo img.logo-link {
     nav ul.nav-list.shown li a button {
         margin-top: 10px;
     }
+}
+
+@media (orientation: portrait) {
+    nav ul.nav-list.shown {
+        width: calc(100vw + 5px) !important;
+        max-width: calc(100vw + 5px) !important;
+        background-color: rgba(0, 0, 0, 1) !important;
+    }
+
 }
