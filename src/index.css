@@ -1,60 +1,5 @@
 /*index.css*/
 
-body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-
-    color: var(--main-text-color);
-    user-select: none;
-
-    /*smooth changing image background transition*/
-    -webkit-transition: background-image 2.2s ease-in-out;
-    -moz-transition: background-image 2.2s ease-in-out;
-    transition: background-image 2.2s ease-in-out;
-    background-color: var(--main-bc);
-    background-repeat: no-repeat;
-    background-position: 50% 40%;
-    background-attachment: fixed;
-}
-
-h1, h2 {
-    padding: 10px;
-}
-
-a {
-    color: var(--light-gray);
-}
-
-button {
-    font-size: calc(1.2rem + 1vh);
-    font-variant: small-caps;
-    width: max-content;
-    height: max-content;
-    padding: 1.2rem 2rem;
-    margin: 1rem;
-    outline: none;
-    border: 2px solid transparent;
-    border-radius: 6px;
-    text-align: center;
-    cursor: pointer;
-
-    background-color: transparent;
-    color: var(--light-gray);
-    text-shadow: 3px 3px 6px rgba(255, 255, 255, .5);
-    letter-spacing: 3px;
-}
-
-
-button:hover,
-button:focus {
-    border-color: var(--blue-light);
-    text-shadow: 3px 3px 5px rgba(255, 255, 255, .6);
-    box-shadow: 2px 3px 58px 5px rgba(255, 255, 255, .24);
-    background-color: rgba(0, 0, 0, 0.12);
-    transition: all 0.23s ease-in-out;
-}
-
 .welcome {
     display: flex;
     flex-direction: column;
@@ -62,43 +7,41 @@ button:focus {
     justify-content: center;
     width: 100%;
     height: 100%;
-
-    transition: height 1s, opacity 1.2s, background-color 2s;
-}
-
-.welcome .background-fx {
-    z-index: -1;
-    position: fixed;
-    background-color: rgba(0, 0, 0, .25);
-    border-top: 2px solid rgba(0, 212, 255, 0.75);
-    border-bottom: 4px solid rgba(0, 212, 255, 0.85);
-    box-shadow: 0 0 500px rgba(0, 212, 255, .45);
-    left: -42.5%;
-    width: 200%;
-    height: 109%;
-    transition: transform 1s, background-color 5s, height 2.6s, border-top-color 3s, border-bottom-color 3s;
-    transform: rotateZ(30deg);
+    transition: height 1s, opacity 1.2s, background-color 2.5s;
 }
 
 .welcome .signature {
-    transform: translateY(-1000%);
+    transform: translate(-150vw, -150vw);
     margin: 50px;
     max-width: 900px;
-    transition: margin-bottom 0.2s, transform 0.5s, filter 2s;
+    opacity: 0;
 }
 
 .welcome .buttons {
-    transition: transform 0.7s;
-    transform: translateY(1000%);
     display: flex;
-    margin: 20px 0 100px;
+    margin: 10px 0 160px 0;
+    opacity: 0;
 }
 
 .welcome .buttons button {
     width: calc(calc(1rem + 1vh) * 9);
 }
 
+.welcome .background-fx {
+    z-index: -1;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .26);
+    border-top: 2px solid rgba(0, 212, 255, 0.75);
+    border-bottom: 4px solid rgba(0, 212, 255, 0.85);
+    box-shadow: 0 0 550px rgba(56, 4, 255, .47);
+    left: -68%;
+    width: 250%;
+    height: 112%;
+    opacity: 0;
+}
+
 .welcome .punch-line {
+    /*visible at until entering site content*/
     display: none;
     transition: opacity 4.5s;
     opacity: 0;
@@ -107,26 +50,30 @@ button:focus {
     transform: skewX(6deg);
 }
 
+.welcome.initialized .signature {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: transform 0.15s, filter 2.1s, opacity 2.1s;
+}
+
+.welcome.initialized .buttons {
+    opacity: 1;
+    transition: opacity 3.8s;
+}
+
+.welcome.initialized .background-fx {
+    transform: rotateZ(30deg);
+    opacity: 1;
+    height: 80%;
+    transition: filter 2s, opacity 1.7s, transform 1s, height 1.8s, border-top-color 3s, border-bottom-color 3s, background-color 5s;
+}
+
 .welcome.has-been-clicked {
+    /*active when user choose language*/
     flex-direction: row;
     position: fixed;
     top: 0;
     height: 130px;
-}
-
-.welcome.has-been-clicked .signature {
-    height: 62px;
-    margin: 25px 25px 10px 25px;
-}
-
-.welcome.has-been-clicked .signature:hover {
-    transform: rotateZ(0);
-}
-
-.welcome.has-been-clicked .background-fx {
-    left: -100%;
-    transform: rotateZ(135deg);
-    background-color: rgba(0, 0, 0, .47);
 }
 
 .welcome.has-been-clicked .logo-container {
@@ -135,12 +82,25 @@ button:focus {
     transform: rotateZ(-45deg);
 }
 
-.welcome.has-been-clicked .punch-line.shown {
-    opacity: 1;
+.welcome.has-been-clicked .signature {
+    height: 62px;
+    margin: 25px 25px 10px 25px;
 }
 
 .welcome.has-been-clicked .buttons {
     display: none;
+}
+
+.welcome.has-been-clicked .punch-line.shown {
+    opacity: 1;
+}
+
+.welcome.has-been-clicked .background-fx {
+    top: -32%;
+    left: -100%;
+    transform: rotateZ(135deg);
+    background-color: rgba(0, 0, 0, .47);
+    height: 370px;
 }
 
 /*main slide-show styled content presentation*/
@@ -155,7 +115,7 @@ button:focus {
 }
 
 .content.shown {
-    transition: transform 1s, width 0.4s;
+    transition: transform 1.35s, width 0.4s;
     will-change: transform;
     transform: translateY(0) scale(1, 1);
 }
@@ -164,9 +124,9 @@ button:focus {
     width: 30%;
     min-width: max-content;
     max-width: 90%;
-    background-color: rgba(0, 0, 0, 0.27);
+    background-color: rgba(0, 0, 0, 0.28);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.11);
     margin: 20px 0;
 }
 
@@ -220,10 +180,10 @@ button:focus {
 }
 
 .card.selected {
-    transition: background-color 0.6s, border-color 2s;
+    transition: background-color 0.7s, border-color 2s;
     margin: 80px 0;
-    background-color: rgba(0, 0, 0, 0.39);
-    border-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .card.selected:hover {
@@ -239,6 +199,7 @@ button:focus {
     display: block;
     border-radius: 11px 11px 0 0;
     background-color: var(--blue-green);
+    text-shadow: 2px 2px 3px rgba(0,0,0,.35);
     padding: 1rem 0;
 }
 
