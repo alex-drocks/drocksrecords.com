@@ -76,9 +76,9 @@ function initialize() {
 
                     function setPunchLineText(language) {
                         if (language === "francais") {
-                            punchLine.textContent = "Mixage, composition et formation audio...";
+                            punchLine.textContent = "Mixage, production musicale et formation audio...";
                         } else if (language === "english") {
-                            punchLine.textContent = "Mixing, composition and audio teaching...";
+                            punchLine.textContent = "Mixing, Music Production and Audio Courses...";
                         }
                     }
                 }
