@@ -11,4 +11,10 @@
     .card {
         width: 90vw;
     }
+
+    nav ul.nav-list.shown {
+        width: calc(100vw + 5px) !important;
+        max-width: calc(100vw + 5px) !important;
+        background-color: rgba(0, 0, 0, 1) !important;
+    }
 }

@@ -11,7 +11,7 @@ nav {
 }
 
 /*open close btn that contains the svg icon*/
-nav > button.nav-btn {
+nav button.nav-btn {
     z-index: 4; /*alway show on top of <ul> which has z-index of 2*/
     position: fixed;
     top: 12px;
@@ -23,8 +23,15 @@ nav > button.nav-btn {
     box-shadow: none;
     outline: none;
     border: none;
-    transition: none;
     border-radius: 50%;
+
+    transition: none;
+    opacity: 0;
+}
+
+nav button.nav-btn.shown {
+    transition: opacity 3.7s;
+    opacity: 1;
 }
 
 /*the svg icon within the open/close button*/
@@ -37,7 +44,7 @@ nav button.nav-btn svg.nav-btn__icon {
 nav button.nav-btn:focus svg.nav-btn__icon,
 nav button.nav-btn:hover svg.nav-btn__icon {
     background-color: var(--blue-light);
-    transition: background-color .5s;
+    transition: background-color .55s;
     cursor: pointer;
 }
 
@@ -63,13 +70,12 @@ nav ul.nav-list {
     padding: 100px 2px;
 
     list-style: none;
-    background-color: rgba(0,0,0,0.62);
+    background-color: rgba(0, 0, 0, 0.62);
     border-left: 1px solid white;
-    box-shadow: 0 0 72px rgba(255,255,255,.28);
+    box-shadow: 0 0 72px rgba(255, 255, 255, .28);
 
     will-change: transform;
     transition: transform 0.12s, background-color 1s, box-shadow 1s;
-    /*opacity: 0;*/
     transform: scale(0, 0);
     -moz-transform: scale(0, 0);
     -webkit-transform: scale(0, 0);
@@ -77,16 +83,14 @@ nav ul.nav-list {
 }
 
 nav ul.nav-list.shown {
-    /*opacity: 1;*/
-    /*transition: background-color 1s, box-shadow 1s;*/
     transform: scale(1, 1);
     -moz-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
 }
 
 nav:hover ul.nav-list.shown {
-    background-color: rgba(0,0,0,0.76);
-    box-shadow: 0 0 72px rgba(255,255,255,.37);
+    background-color: rgba(0, 0, 0, 0.76);
+    box-shadow: 0 0 72px rgba(255, 255, 255, .37);
 }
 
 nav ul.nav-list li {
@@ -111,7 +115,7 @@ nav ul.nav-list li.buttons button {
     outline: none;
     color: white;
     box-shadow: 1px 3px 8px rgba(0, 0, 0, .85);
-    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
 }
 
 nav ul.nav-list li.buttons button:hover {
@@ -137,23 +141,4 @@ nav li.main-logo img.logo-link {
     min-height: 60px;
     max-height: 60px;
     margin: 10px;
-}
-
-
-@media (max-height: 500px) {
-    nav ul.nav-list.shown {
-        padding: 0;
-    }
-    nav ul.nav-list.shown li a button {
-        margin-top: 10px;
-    }
-}
-
-@media (orientation: portrait) {
-    nav ul.nav-list.shown {
-        width: calc(100vw + 5px) !important;
-        max-width: calc(100vw + 5px) !important;
-        background-color: rgba(0, 0, 0, 1) !important;
-    }
-
 }
