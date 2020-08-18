@@ -1,20 +1,120 @@
 /*media-queries.css*/
+
 @media (orientation: portrait) {
-    .welcome .background-fx {
-        height: 65%;
+    body {
+        background-size: 280%;
     }
 
-    .welcome.has-been-clicked .background-fx {
-        height: 30%;
+    .welcome.initialized.has-been-clicked {
+        position: relative;
+        height: 200px;
+        min-height: 200px;
+        max-height: 200px;
     }
 
-    .card {
-        width: 90vw;
+    .welcome.initialized.has-been-clicked div.logo-container img.signature {
+        height: 100px;
+        margin: 40px 20px 0 20px;
+    }
+
+    .welcome.initialized.has-been-clicked div.logo-container p.punch-line {
+        font-size: calc(1rem + 2.4vw);
+        text-align: center;
+        width: 100vw;
+        transform: skewX(0);
+        margin: 0;
+        margin-top: 12px;
+    }
+
+    .welcome.initialized.has-been-clicked div.background-fx,
+    .welcome.initialized.has-been-clicked div.logo-container {
+        transform: rotate(0) !important;
+        top: -30px;
+        height: 220px;
+        margin: 30px 8px;
+    }
+
+    .welcome.initialized.has-been-clicked div.logo-container {
+        top: -1px;
+        position: relative;
+    }
+
+    .welcome.initialized .buttons button {
+        font-size: calc(2rem + 1vh);
+        min-width: max-content;
+    }
+
+    .content.shown {
+        justify-content: flex-start;
+    }
+
+    .content.shown div.card {
+        /*all cards*/
+        max-width: 75vw;
+        width: 75vw;
+        min-width: 75vw;
+        background-color: rgba(0, 0, 0, .8);
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        font-size: calc(1rem + 0.5vh);
+    }
+
+    .content.shown div.card.selected li {
+        font-size: calc(1rem + 0.6vh + 0.5vw);
+    }
+
+    .content.shown div.card.selected {
+        margin-top: 4vh;
+        max-width: 93vw;
+        width: 93vw;
+        min-width: 93vw;
+        background-color: rgba(0, 0, 0, .81);
+        border: 1px solid rgba(255, 255, 255, 0.31);
+    }
+
+    .content.shown div.card.selected .card-body {
+        padding: 10px 40px 30px 40px;
+    }
+
+    .content.shown div.card.selected .card-body .card-subtitle {
+        margin: 30px 0 20px 0;
+    }
+
+    nav button.nav-btn.shown {
+        margin: 1px;
     }
 
     nav ul.nav-list.shown {
-        width: calc(100vw + 5px) !important;
-        max-width: calc(100vw + 5px) !important;
+        width: calc(100vw + 15px) !important;
+        max-width: calc(100vw + 15px) !important;
+        min-width: calc(100vw + 15px) !important;
+        height: calc(100vh + 25px) !important;
+        max-height: calc(100vh + 25px) !important;
+        min-height: calc(100vh + 25px) !important;
         background-color: rgba(0, 0, 0, 1) !important;
+        font-size: calc(1rem + 0.8vh) !important;
+    }
+
+    nav ul.nav-list.shown li,
+    nav ul.nav-list.shown h1 {
+        max-width: 99vw !important;
+        min-width: 99vw !important;
+        width: 99vw !important;
+        padding: 0 !important;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul.nav-list.shown li.main-logo p.punch-line {
+        font-size: calc(1.1rem + 1vh) !important;
+    }
+
+    nav ul.nav-list.shown li.main-logo {
+        height: max-content;
+    }
+
+    nav ul.nav-list.shown li.main-logo img {
+        height: 150px;
+        max-height: 150px;
+        min-height: 150px;
     }
 }

@@ -40,8 +40,7 @@ function initialize() {
                 content.classList.add("shown"); //show the actual content in the right language
 
                 welcome.classList.add("has-been-clicked");
-                // animations.unregisterAnimationTimer();
-                animations.shouldAnimateSignature = false;
+                animations.unregisterSignatureAnimation();
 
                 //create right-side navbar like price feature
                 welcome.style.opacity = "0"; //trigger CSS opacity transition
@@ -150,7 +149,6 @@ const animations = {
     currIndex: -1,
     intervalID: undefined,
     shouldAnimateSignature: true,
-
     init() {
         animations.setNewColor();
         animations.registerAnimationTimer();
@@ -161,9 +159,8 @@ const animations = {
             animations.setNewColor();
         }, 3000);
     },
-    unregisterAnimationTimer() {
-        //stop animating drop-shadow color
-        clearInterval(animations.intervalID);
+    unregisterSignatureAnimation() {
+        animations.shouldAnimateSignature = false;
         animations.html.signature.style.filter = "none";
         animations.html.bgFx.style.borderTopColor = "var(--blue)";
     },

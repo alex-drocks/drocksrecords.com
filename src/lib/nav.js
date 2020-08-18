@@ -28,17 +28,19 @@ export class Nav {
             if (lang === "francais") {
                 nav.list.innerHTML = `
                 <li class="main-logo" style="opacity: 0">
-                <a href="./"><img src="../images/welcome-signature-logo.png" class="logo-link" alt="Logo"></a>
-                ${punchLine}
+                <a href="./">
+                    <img src="../images/welcome-signature-logo.png" class="logo-link" alt="Logo">
+                </a>
+                <p class="punch-line">${punchLine}</p>
                 </li>
                 <br>
                 <br>
                 <br>
                 <h1>Tarification Podcasts:</h1>
-                <li>Mixage. 50$/épisode (+25$ par invités)</li>
-                <li>Établir votre signature sonore initiale. 150$</li>
-                <li>Formation personnalisée à distance. 100$</li>
-                <li>Formation personnalisée sur place. 200$</li>
+                <li>Mixage. 50$/épisode (+25 par invité)</li>
+                <li>Établir votre signature sonore. 150$</li>
+                <li>Formation à distance. 100$</li>
+                <li>Formation sur place. 200$</li>
                 <br>
                 <br>
                 <br>
@@ -61,8 +63,8 @@ export class Nav {
                 <br>
                 <br>
                 <h1>Podcasts Pricing:</h1>
-                <li>Mix. 50$/episode (+25$ per guests)</li>
-                <li>Establishing your sound signature. 150$</li>
+                <li>Mix. 50$/episode (+25$ per guest)</li>
+                <li>Establish your sound signature. 150$</li>
                 <li>Local training (Montreal area). 200$</li>
                 <li>Remote training. 100$</li>
                 <br>
@@ -71,7 +73,7 @@ export class Nav {
                 <h1>Music Pricing:</h1>
                 <li>Song Mixing (with vocals). 225$</li>
                 <li>Song Mixing (instrumental). 150$</li>
-                <li>Custom Soundtrack Composition. 250$</li>
+                <li>Soundtrack Composition. 250$</li>
                 <br>
                 <br>
                 <br>
