@@ -37,14 +37,13 @@ module.exports = merge(common, {
         minimizer: [
             new TerserPlugin({ //minify js
                 test: /\.js(\?.*)?$/i, // default
-                // exclude: /\/lib/, // won't minify already minified files
                 cache: true,
                 parallel: true,
                 sourceMap: false, // Must be set to true if using source-maps in production
                 terserOptions: {
                     // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
                     mangle: true,
-                    extractComments:false,
+                    extractComments: false,
                 }
             }),
             new OptimizeCssAssetsPlugin(), // minify css

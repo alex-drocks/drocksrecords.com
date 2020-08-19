@@ -1,7 +1,8 @@
 {
   "name": "drocksrecords",
   "version": "1.0.0",
-  "description": "site drocksrecords.com",
+  "description": "Website for drocksrecords.com",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
@@ -13,11 +14,11 @@
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.2.1",
-    "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.2.0",
     "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
+    "imagemin-webp": "^6.0.0",
     "mini-css-extract-plugin": "^0.10.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "script-ext-html-webpack-plugin": "^2.1.4",
@@ -26,7 +27,6 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.1.2",
-    "imagemin-webp": "^6.0.0"
+    "webpack-merge": "^5.1.2"
   }
 }

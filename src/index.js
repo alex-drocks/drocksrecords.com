@@ -11,7 +11,8 @@ import "./lib/media-queries.css";
 import "./lib/nav.css";
 
 //images
-import signatureImg from "./images/welcome-signature-logo.png"
+import "./images/favicon.png";
+import "./images/welcome-signature-logo.png";
 import bg1 from "./images/bg1.png";
 import bg2 from "./images/bg2.png";
 import bg3 from "./images/bg3.png";
@@ -33,8 +34,21 @@ function initialize() {
     (function registerEventListeners() {
         const punchLine = welcome.querySelector(".punch-line");
         const signature = welcome.querySelector(".signature");
+
+        //reload page on signature position clicks
+        // (necessary right now because of bad design and z-index crap with the content)
+        window.onclick = (e) => {
+            const signaturePos = signature.getBoundingClientRect();
+            if ((e.clientX <= (signaturePos.x + signaturePos.width) && e.clientX >= signaturePos.x)
+                && e.clientY <= signaturePos.y + signaturePos.height && e.clientY >= signaturePos.y) {
+                // console.log(e)
+                // console.log(signaturePos)
+                window.location.href = "./"
+            }
+        };
+        //enter site by selecting a language
         welcome.querySelectorAll("button").forEach((btn) => {
-            btn.onclick = () => {
+            btn.onclick = function showContent() {
                 const contentLang = btn.dataset.lang;
                 const content = setSelectedLanguageContent(contentLang);
                 content.classList.add("shown"); //show the actual content in the right language
@@ -42,7 +56,7 @@ function initialize() {
                 welcome.classList.add("has-been-clicked");
                 animations.unregisterSignatureAnimation();
 
-                //create right-side navbar like price feature
+                //create right-side navbar-like price rates
                 welcome.style.opacity = "0"; //trigger CSS opacity transition
                 signature.style.display = "none";
                 setTimeout(() => {
