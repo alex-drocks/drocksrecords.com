@@ -35,6 +35,14 @@
     }
 }
 
+@media (max-height: 810px) {
+    .welcome.initialized .signature {
+        max-width: 46vw;
+        margin-bottom: 5px;
+        margin-top: 60px;
+    }
+}
+
 @media (orientation: portrait) {
     body {
         background-size: 280%;
