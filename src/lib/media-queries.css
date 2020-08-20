@@ -1,8 +1,52 @@
 /*media-queries.css*/
+@media (min-width: 750px) {
+    .welcome.initialized .signature {
+        max-width: 75vw;
+    }
+}
+@media (min-width: 1000px) {
+    .welcome.initialized .signature {
+        max-width: 69vw;
+    }
+}
+@media (min-width: 1175px) {
+    .welcome.initialized .signature {
+        max-width: 64vw;
+    }
+}
+@media (min-width: 1300px) {
+    .welcome.initialized .signature {
+        max-width: 60vw;
+    }
+}
+@media (min-width: 1400px) {
+    .welcome.initialized .signature {
+        max-width: 55vw;
+    }
+}
+@media (min-width: 1500px) {
+    .welcome.initialized .signature {
+        max-width: 50vw;
+    }
+}
+@media (min-width: 1600px) {
+    .welcome.initialized .signature {
+        max-width: 47vw;
+    }
+}
 
 @media (orientation: portrait) {
     body {
         background-size: 280%;
+    }
+
+    .welcome.initialized .signature {
+        max-width: 82vw;
+    }
+
+    .welcome.initialized .buttons button {
+        font-size: calc(2rem + 1vh);
+        min-width: max-content;
     }
 
     .welcome.initialized.has-been-clicked {
@@ -37,11 +81,6 @@
     .welcome.initialized.has-been-clicked div.logo-container {
         top: -1px;
         position: relative;
-    }
-
-    .welcome.initialized .buttons button {
-        font-size: calc(2rem + 1vh);
-        min-width: max-content;
     }
 
     .content.shown {

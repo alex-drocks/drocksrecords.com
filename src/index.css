@@ -13,7 +13,7 @@
 .welcome .signature {
     transform: translate(-150vw, -150vw);
     margin: 50px;
-    max-width: 900px;
+    max-width: 47vw; /*see media queries for max-width*/
     opacity: 0;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .welcome .buttons button {
-    width: calc(calc(1rem + 1vh) * 9);
+    width: calc(calc(1rem + 1vh) * 10);
 }
 
 .welcome .background-fx {
