@@ -51,7 +51,7 @@ export class Nav {
                 <br>
                 <br>
                 <br>
-                <li><i class="punch-line" style="color: var(--dark-gray);">© D Rocks Records 2020</i></li>
+                <li><i class="punch-line" style="color: var(--dark-gray);">© D Rocks Records 2021</i></li>
                 `;
             } else if (lang === "english") {
                 nav.list.innerHTML = `
@@ -77,7 +77,7 @@ export class Nav {
                 <br>
                 <br>
                 <br>
-                <li><i class="punch-line" style="color: var(--dark-gray);">© D Rocks Records 2020</i></li>
+                <li><i class="punch-line" style="color: var(--dark-gray);">© D Rocks Records 2021</i></li>
                 `;
             }
 
