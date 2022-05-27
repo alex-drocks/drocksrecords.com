@@ -11,16 +11,14 @@ import "./lib/media-queries.css";
 import "./lib/nav.css";
 
 //images
-import "./images/favicon.png";
-import "./images/welcome-signature-logo.png";
-import bg1 from "./images/bg1.png";
-import bg2 from "./images/bg2.png";
-import bg3 from "./images/bg3.png";
+import bg1 from "./images/bg1.webp";
+import bg2 from "./images/bg2.webp";
+import bg3 from "./images/bg3.webp";
 
 
-window.onload = () => {
+window.addEventListener("DOMContentLoaded", () => {
     initialize();
-}
+})
 
 function initialize() {
     backgroundImageChanger.init();

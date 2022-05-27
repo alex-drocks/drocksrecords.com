@@ -1,32 +1,17 @@
 {
   "name": "drocksrecords",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Website for drocksrecords.com",
   "private": true,
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "update-dependencies": "npx npm-check-updates -u"
+    "dev": "vite serve src",
+    "build": "vite build src",
+    "preview": "vite preview src"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9"
   },
   "author": "Alexandre Desroches",
-  "license": "MIT",
-  "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^4.2.1",
-    "file-loader": "^6.0.0",
-    "html-loader": "^1.2.0",
-    "html-webpack-plugin": "^4.3.0",
-    "image-webpack-loader": "^6.0.0",
-    "imagemin-webp": "^6.0.0",
-    "mini-css-extract-plugin": "^0.10.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "script-ext-html-webpack-plugin": "^2.1.4",
-    "style-loader": "^1.2.1",
-    "terser-webpack-plugin": "^4.1.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.1.2"
-  }
+  "license": "MIT"
 }

@@ -1,4 +1,5 @@
 //nav.js  -  Navigation Menu to be called in pages that needs it
+import signatureImg from "../images/welcome-signature-logo.png";
 
 export class Nav {
     constructor() {
@@ -29,7 +30,7 @@ export class Nav {
                 nav.list.innerHTML = `
                 <li class="main-logo" style="opacity: 0">
                 <a href="./">
-                    <img src="../images/welcome-signature-logo.png" class="logo-link" alt="Logo">
+                    <img src="${signatureImg}" class="logo-link" alt="Logo">
                 </a>
                 <p class="punch-line">${punchLine}</p>
                 </li>
@@ -56,7 +57,7 @@ export class Nav {
             } else if (lang === "english") {
                 nav.list.innerHTML = `
                 <li class="main-logo" style="opacity: 0">
-                <a href="./"><img src="../images/welcome-signature-logo.png" class="logo-link" alt="Logo"></a>
+                <a href="./"><img src="${signatureImg}" class="logo-link" alt="Logo"></a>
                 ${punchLine}
                 </li>
                 <br>
